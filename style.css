@@ -1,0 +1,200 @@
+:root {
+  --very-dark-blue-main-bg: hsl(233, 47%, 7%);
+  --dark-desaturated-blue-card-bg: hsl(244, 38%, 16%);
+  --soft-violet-accent: hsl(277, 64%, 61%);
+
+  --white-text: hsl(0, 0%, 100%);
+  --slightly-transparent-white-p: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url(./assets/fonts/Inter/static/Inter_18pt-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url(./assets/fonts/Inter/static/Inter_24pt-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca-Regular';
+  src: url(./assets/fonts/LexendDeca/static/LexendDeca-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter-Regular', sans-serif;
+  background-color: var(--very-dark-blue-main-bg);
+  color: var(--white-text);
+  font-size: 15px;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--dark-desaturated-blue-card-bg);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 90%;
+  width: 720px;
+}
+
+.heading {
+  font-family: 'Inter-Bold', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white-text);
+}
+
+span {
+  color: var(--soft-violet-accent);
+}
+
+.description {
+  font-size: 0.82rem;
+  color: var(--slightly-transparent-white-p);
+  margin-bottom: 1.9rem;
+  line-height: 1.4;
+  font-family: 'LexendDeca-Regular', sans-serif;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  color: var(--slightly-transparent-white-stats);
+  margin-bottom: 1rem;
+}
+
+.stat h3 {
+  font-size: 1rem;
+  font-family: 'Inter-Bold', sans-serif;
+  text-transform: uppercase;
+  color: var(--white-text);
+}
+
+.stat p {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  color: var(--slightly-transparent-white-stats);
+  font-family: 'LexendDeca-Regular', sans-serif;
+}
+
+.text-content {
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.image-cont {
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--soft-violet-accent);
+  border-radius: 10px;
+  opacity: 0.4;
+  filter: brightness(1);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .text-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-cont {
+    width: 100%;
+  }
+
+  .card-image {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
