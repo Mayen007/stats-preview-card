@@ -27,11 +27,11 @@ Users should be able to:
 
 #### Desktop View
 
-![Desktop Screenshot](./assets/screenshots/desktop-view.png)
+![Desktop Screenshot](./assets/images/desktop-view.png)
 
 #### Mobile View
 
-![Mobile Screenshot](./assets/screenshots/mobile-view.png)
+![Mobile Screenshot](./assets/images/mobile-view.png)
 
 ### Links
 
